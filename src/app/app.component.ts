@@ -3,8 +3,8 @@ import { TileDirective } from 'src/app/tile.directive';
 import { TileItem } from 'src/app/tile-item';
 import { TileComponent } from 'src/app/tile.component';
 import { ChartComponent } from 'src/app/chart/chart.component';
-import { UserComponent } from 'src/app/user/user.component';
-import { ListConfig } from 'src/app/user/list.config';
+import { ListComponent } from 'src/app/list/list.component';
+import { ListConfig } from 'src/app/list/list.config';
 import { ChartConfig } from 'src/app/chart/chart.config';
 import { StorageService } from 'src/app/storage.service';
 
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       button3: true,
       col: this.getCol(this.tiles.length),
     };
-    const tileItem: TileItem<ListConfig> = new TileItem<ListConfig>(UserComponent, conf);
+    const tileItem: TileItem<ListConfig> = new TileItem<ListConfig>(ListComponent, conf);
     this.tiles.push(tileItem);
     this.storage.addToItem(TILES_LIST, JSON.stringify(conf));
     this.currentIndex = this.tiles.length - 1;

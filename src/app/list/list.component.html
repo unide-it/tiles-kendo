@@ -1,9 +1,8 @@
-<kendo-tilelayout-item-header>
-  <div *ngIf="config.title">{{config.title}}</div>
+<app-tile-header [title]="config?.title">
   <button *ngIf="config.button1" kendoButton>Button 1</button>
   <button *ngIf="config.button2" kendoButton>Button 2</button>
   <button *ngIf="config.button3" kendoButton>Button 3</button>
-</kendo-tilelayout-item-header>
+</app-tile-header>
 <kendo-tilelayout-item-body>
   <p>list works!</p>
 </kendo-tilelayout-item-body>
