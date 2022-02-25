@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChartComponent } from 'src/app/tiles/chart/chart.component';
+import { TileHeaderModule } from 'src/app/shared/tile-header/tile-header.module';
+import { LayoutModule, TileLayoutModule } from '@progress/kendo-angular-layout';
+import { ButtonModule, ButtonsModule } from '@progress/kendo-angular-buttons';
+import { ChartWithSmileComponent } from './chart-with-smile/chart-with-smile.component';
+import { ChartTileDirective } from './chart-tile.directive';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { FormsModule } from '@angular/forms';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { IconsModule } from '@progress/kendo-angular-icons';
-import { DirectivesModule } from 'src/app/shared/directives/directives.module';
-import { ChartModule } from 'src/app/tiles/chart/chart.module';
-import { ListModule } from 'src/app/tiles/list/list.module';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [ChartComponent, ChartWithSmileComponent, ChartTileDirective],
   imports: [
     BrowserModule,
     LayoutModule,
@@ -29,12 +27,9 @@ import { ListModule } from 'src/app/tiles/list/list.module';
     FormsModule,
     DropDownsModule,
     IconsModule,
-    DirectivesModule,
-    ChartModule,
-    ListModule,
+    TileHeaderModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  exports: [ChartComponent],
 })
-export class AppModule {
+export class ChartModule {
 }

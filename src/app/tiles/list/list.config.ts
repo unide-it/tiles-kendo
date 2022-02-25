@@ -4,4 +4,5 @@ export interface ListConfig {
   button3?: boolean;
   title?: string;
   col: number
+  id?: string;
 }

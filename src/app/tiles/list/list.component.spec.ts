@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TileHeaderComponent } from './tile-header.component';
+import { ListComponent } from 'src/app/tiles/list/list.component';
 
-describe('TileHeaderComponent', () => {
-  let component: TileHeaderComponent;
-  let fixture: ComponentFixture<TileHeaderComponent>;
+describe('UserComponent', () => {
+  let component: ListComponent;
+  let fixture: ComponentFixture<ListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TileHeaderComponent ]
+      declarations: [ ListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TileHeaderComponent);
+    fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

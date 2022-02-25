@@ -4,4 +4,7 @@
   </ng-content>
   <ng-content select="[smallButtons]">
   </ng-content>
+  <kendo-dropdownbutton [data]="data"
+                        [iconClass]="'k-i-more-vertical'" (itemClick)="onItemClick($event)">
+  </kendo-dropdownbutton>
 </kendo-tilelayout-item-header>
