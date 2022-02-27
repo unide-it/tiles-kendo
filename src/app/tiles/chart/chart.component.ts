@@ -16,10 +16,6 @@ export class ChartComponent implements OnInit, TileComponent {
   public moreButtonItemClicked: EventEmitter<DropdownModel> = new EventEmitter<DropdownModel>();
   public dataButtons: DropdownModel[] = [
     {
-      text: 'Remove',
-      actionName: ActionName.REMOVE,
-    },
-    {
       text: 'Change with smiles',
       actionName: ActionName.SMILES,
     },

@@ -12,20 +12,19 @@ export class TileHeaderComponent implements OnInit {
   public title: string | undefined;
 
   @Input()
-  public data: DropdownModel[] = [
-    {
-      text: 'Remove',
-      actionName: ActionName.REMOVE
-    },
-  ];
+  public data: DropdownModel[] = [];
 
   @Output()
-  public moreButtonItemClicked: EventEmitter<DropdownModel> = new EventEmitter<DropdownModel>()
+  public moreButtonItemClicked: EventEmitter<DropdownModel> = new EventEmitter<DropdownModel>();
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.data.push({
+      text: 'Remove',
+      actionName: ActionName.REMOVE,
+    });
   }
 
   public onItemClick(event: any): void {
