@@ -1,4 +1,6 @@
-<app-tile-header [title]="config?.title">
+<app-tile-header [title]="config?.title"
+                 (moreButtonItemClicked)="onMoreButtonClick($event)">
+
   <button bigButtons *ngIf="config.button1" kendoButton>Button 1</button>
   <button bigButtons *ngIf="config.button2" kendoButton>Button 2</button>
   <button smallButtons *ngIf="config.button3" kendoButton>Button 3</button>

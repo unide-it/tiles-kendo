@@ -4,4 +4,5 @@ export class ChartConfig {
   button3?: boolean;
   title?: string;
   col: number = 1;
+  id?: string;
 }

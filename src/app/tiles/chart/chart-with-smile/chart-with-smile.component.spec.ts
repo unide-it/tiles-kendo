@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from 'src/app/list/list.component';
+import { ChartWithSmileComponent } from './chart-with-smile.component';
 
-describe('UserComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('ChartWithSmileComponent', () => {
+  let component: ChartWithSmileComponent;
+  let fixture: ComponentFixture<ChartWithSmileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListComponent ]
+      declarations: [ ChartWithSmileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(ChartWithSmileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
