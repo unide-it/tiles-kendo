@@ -8,6 +8,11 @@ import { ActionName, DropdownModel } from 'src/app/shared/tile-header/dropdown.m
 })
 export class TileHeaderComponent implements OnInit {
 
+  public buttonsData: DropdownModel[] = [{
+    text: 'Remove',
+    actionName: ActionName.REMOVE,
+  }]
+
   @Input()
   public title: string | undefined;
 
@@ -17,14 +22,8 @@ export class TileHeaderComponent implements OnInit {
   @Output()
   public moreButtonItemClicked: EventEmitter<DropdownModel> = new EventEmitter<DropdownModel>();
 
-  constructor() {
-  }
-
   ngOnInit(): void {
-    this.data.push({
-      text: 'Remove',
-      actionName: ActionName.REMOVE,
-    });
+    this.buttonsData = this.buttonsData.concat(this.data);
   }
 
   public onItemClick(event: any): void {
